@@ -1,23 +1,4 @@
 unit unitChesstegMain;
-(****************************************************************)
-(* (c) 1994 1995 Paul Koop chessteg didaktisches Schachprogramm *)
-(* das didaktische Schachprogramm chessteg wurde                *)
-(* urspruenglisch im rahmen der entwicklung der                 *)
-(* Algorithmisch Rekursive Sequenzanalyse                       *)
-(* zur ueberpruefung der verwendbarkeit von                     *)
-(* spielbaeumen und alpha beta suche entwickelt                 *)
-(* nicht als spielstarkes programm beabsichtigt                 *)
-(* liegt seine staerke in der didaktischen verwendbarkeit       *)
-(*                                                              *)
-(* mit enpassant als bewerterer Zug innerhalb Suchbaum          *)
-(* Bauernumwandlung in Dame, Turm, Springer oder Laeufer        *)
-(* nach umwandlungsfaehigem Bauernzug wird separat bewertet und *)
-(* umgewandelt in Dame, Turm, Springer oder Laeufer             *)
-(* Rochade als Figurenumstellung an Stelle von bewertetem Zug   *)
-(* fuer dos (derivate) unix (derivate) turbo-pascal free-pascal *)
-(* das programm darf mit copyright paul koop kostenfrei zu      *)
-(* nicht kommerziellen zwecken verwendet werden                 *)
-(****************************************************************)
 
 {$mode objfpc}{$H+}
 
@@ -65,8 +46,6 @@ type
     procedure grdBrettansichtSelectCell(Sender: TObject; aCol, aRow: Integer;
       var CanSelect: Boolean);
     procedure grdZeigebrett();
-    procedure LabelSpielerzugClick(Sender: TObject);
-
   private
     { private declarations }
   public
@@ -220,15 +199,6 @@ begin
 
 end;
 
-procedure TfrmChessteg.LabelSpielerzugClick(Sender: TObject);
-begin
-
-end;
-
-
-
-
-
 procedure TfrmChessteg.FormCreate(Sender: TObject);
 var x:integer;
 begin
@@ -311,14 +281,14 @@ end;
 
 procedure TfrmChessteg.btnNaechsterZugClick(Sender: TObject);
 begin
- von.text:='von';
-  nach.text:='nach';
+ von.text:='从';
+  nach.text:='到';
  IF weissAmZug THEN
   BEGIN (* weisAmZug *)
   IF (NOT(endmatt)OR(patt))
    THEN
    BEGIN
-   amZug.Caption:='Schwarz am Zug';
+   amZug.Caption:='黑色移动';
     IF (
 
         ((kleinerochademoeglich(figurenliste,cweiss))AND (spielerzug.vonpos=E1) AND (spielerzug.nachpos=G1))
@@ -363,7 +333,7 @@ begin
    END; (* weissAmZug  *)
    IF NOT(weissAmZug) THEN
    BEGIN (* schwarzAmZug  *)
-   amZug.Caption:='Weiss am Zug';
+   amZug.Caption:='白色移动';
    IF (NOT(endmatt)OR(patt))
    THEN
    BEGIN
@@ -402,8 +372,6 @@ begin
    //ShowMessage ('Schwarz am Zug: Ende');
    END;(* schwarzAmZug *)
 end;
-
-
 
 end.
 

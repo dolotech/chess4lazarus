@@ -1,35 +1,109 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CONFIG>
   <ProjectOptions>
-    <Version Value="11"/>
+    <Version Value="12"/>
     <PathDelim Value="\"/>
     <General>
+      <Flags>
+        <CompatibilityMode Value="True"/>
+      </Flags>
       <SessionStorage Value="InProjectDir"/>
-      <MainUnit Value="0"/>
       <Title Value="chessteg"/>
       <ResourceType Value="res"/>
       <UseXPManifest Value="True"/>
       <Icon Value="0"/>
       <Resources Count="12">
-        <Resource_0 FileName="../../Documents/chesstegMitFigurenPNGSource/Chess_bdt60.png" Type="RCDATA" ResourceName="CHESS_BDT60"/>
-        <Resource_1 FileName="../../Documents/chesstegMitFigurenPNGSource/Chess_blt60.png" Type="RCDATA" ResourceName="CHESS_BLT60"/>
-        <Resource_2 FileName="../../Documents/chesstegMitFigurenPNGSource/Chess_kdt60.png" Type="RCDATA" ResourceName="CHESS_KDT60"/>
-        <Resource_3 FileName="../../Documents/chesstegMitFigurenPNGSource/Chess_klt60.png" Type="RCDATA" ResourceName="CHESS_KLT60"/>
-        <Resource_4 FileName="../../Documents/chesstegMitFigurenPNGSource/Chess_ndt60.png" Type="RCDATA" ResourceName="CHESS_NDT60"/>
-        <Resource_5 FileName="../../Documents/chesstegMitFigurenPNGSource/Chess_nlt60.png" Type="RCDATA" ResourceName="CHESS_NLT60"/>
-        <Resource_6 FileName="../../Documents/chesstegMitFigurenPNGSource/Chess_pdt60.png" Type="RCDATA" ResourceName="CHESS_PDT60"/>
-        <Resource_7 FileName="../../Documents/chesstegMitFigurenPNGSource/Chess_plt60.png" Type="RCDATA" ResourceName="CHESS_PLT60"/>
-        <Resource_8 FileName="../../Documents/chesstegMitFigurenPNGSource/Chess_qdt60.png" Type="RCDATA" ResourceName="CHESS_QDT60"/>
-        <Resource_9 FileName="../../Documents/chesstegMitFigurenPNGSource/Chess_qlt60.png" Type="RCDATA" ResourceName="CHESS_QLT60"/>
-        <Resource_10 FileName="../../Documents/chesstegMitFigurenPNGSource/Chess_rdt60.png" Type="RCDATA" ResourceName="CHESS_RDT60"/>
-        <Resource_11 FileName="../../Documents/chesstegMitFigurenPNGSource/Chess_rlt60.png" Type="RCDATA" ResourceName="CHESS_RLT60"/>
+        <Resource_0 FileName="Chess_bdt60.png" Type="RCDATA" ResourceName="CHESS_BDT60"/>
+        <Resource_1 FileName="Chess_blt60.png" Type="RCDATA" ResourceName="CHESS_BLT60"/>
+        <Resource_2 FileName="Chess_kdt60.png" Type="RCDATA" ResourceName="CHESS_KDT60"/>
+        <Resource_3 FileName="Chess_klt60.png" Type="RCDATA" ResourceName="CHESS_KLT60"/>
+        <Resource_4 FileName="Chess_ndt60.png" Type="RCDATA" ResourceName="CHESS_NDT60"/>
+        <Resource_5 FileName="Chess_nlt60.png" Type="RCDATA" ResourceName="CHESS_NLT60"/>
+        <Resource_6 FileName="Chess_pdt60.png" Type="RCDATA" ResourceName="CHESS_PDT60"/>
+        <Resource_7 FileName="Chess_plt60.png" Type="RCDATA" ResourceName="CHESS_PLT60"/>
+        <Resource_8 FileName="Chess_qdt60.png" Type="RCDATA" ResourceName="CHESS_QDT60"/>
+        <Resource_9 FileName="Chess_qlt60.png" Type="RCDATA" ResourceName="CHESS_QLT60"/>
+        <Resource_10 FileName="Chess_rdt60.png" Type="RCDATA" ResourceName="CHESS_RDT60"/>
+        <Resource_11 FileName="Chess_rlt60.png" Type="RCDATA" ResourceName="CHESS_RLT60"/>
       </Resources>
     </General>
     <i18n>
       <EnableI18N LFM="False"/>
     </i18n>
-    <BuildModes Count="1">
+    <BuildModes Count="3">
       <Item1 Name="Default" Default="True"/>
+      <Item2 Name="Debug">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <PathDelim Value="\"/>
+          <Target>
+            <Filename Value="chessteg"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <Parsing>
+            <SyntaxOptions>
+              <IncludeAssertionCode Value="True"/>
+            </SyntaxOptions>
+          </Parsing>
+          <CodeGeneration>
+            <Checks>
+              <IOChecks Value="True"/>
+              <RangeChecks Value="True"/>
+              <OverflowChecks Value="True"/>
+              <StackChecks Value="True"/>
+            </Checks>
+            <VerifyObjMethodCallValidity Value="True"/>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <DebugInfoType Value="dsDwarf3"/>
+              <UseHeaptrc Value="True"/>
+              <TrashVariables Value="True"/>
+              <UseExternalDbgSyms Value="True"/>
+            </Debugging>
+            <Options>
+              <Win32>
+                <GraphicApplication Value="True"/>
+              </Win32>
+            </Options>
+          </Linking>
+        </CompilerOptions>
+      </Item2>
+      <Item3 Name="Release">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <PathDelim Value="\"/>
+          <Target>
+            <Filename Value="chessteg"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <CodeGeneration>
+            <SmartLinkUnit Value="True"/>
+            <Optimizations>
+              <OptimizationLevel Value="4"/>
+            </Optimizations>
+            <SmallerCode Value="True"/>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <GenerateDebugInfo Value="False"/>
+              <RunWithoutDebug Value="True"/>
+            </Debugging>
+            <LinkSmart Value="True"/>
+            <Options>
+              <Win32>
+                <GraphicApplication Value="True"/>
+              </Win32>
+            </Options>
+          </Linking>
+        </CompilerOptions>
+      </Item3>
     </BuildModes>
     <PublishOptions>
       <Version Value="2"/>
